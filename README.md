@@ -14,7 +14,7 @@
 
 ## 技术支持
 
-* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1380)
+* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1518)
 
 * [npm包](https://www.npmjs.com/package/hm-uniapp-cover-card)
 
@@ -48,7 +48,7 @@ export default {
 ```html
 <template>
   <div class="test-component">
-    <hm-cover-card></hm-cover-card>
+    <hm-cover-card :options="options"></hm-cover-card>
   </div>
 </template>
 <script>
@@ -58,6 +58,14 @@ export default {
   components: { HmCoverCard },
   data() {
     return {
+      options: {
+          entryPic:
+            '/static/hm-cover-card/images/img_25361_0_1.png',
+          title: '单色摄影',
+          text: '456张风景照片',
+          shoucang:
+            '/static/hm-cover-card/images/img_25361_0_0.png'
+        }
     };
   },
   methods: {
@@ -69,6 +77,7 @@ export default {
 </script>
 <style>
 </style>
+
 ```
 
 ## 属性说明
@@ -81,7 +90,10 @@ options对象各个属性说明如下：
 
 | 属性名        | 类型     | 默认值 | 说明                                                                       |
 |-----------   |---------|--------|----------------------------------------------------------------------------|
-| title        | String  | -      | 标题文字                                                                   |
+| entryPic        | String  | -      | 封面图片                                                                   |
+| title        | String  | -      | 标题                                                                   |
+| text        | String  | -      | 数量                                                                   |
+| shoucang        | String  | -      | 收藏图片                                                                   |
 
 ## 事件说明
 
@@ -91,6 +103,6 @@ options对象各个属性说明如下：
 
 ## 更新日志
 
-### 0.0.1(2020-03-07)
+### 0.0.1(2020-03-028)
 
 * 完成第一个版本
